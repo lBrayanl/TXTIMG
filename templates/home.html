@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="jumbotron">
+  <h1 class="display-4">Bienvenido a <b>IMGTXT</b></h1>
+  <p class="lead"><b>IMGTXT</b> es un proyecto con el cual se pretende comprender el funcionamiento de los sistemas expertos.<br>
+                  A continuacion puedes añadir una imagen con texto de tu dispositivo, el sistema decifrara que dice la imagen
+                  y en que idioma esta escrito, aclarar que solo reconoce el idioma Español(ES), Ingles() y Frances().
+  </p><br>
+  <div class="contenido">
+    <h4 class="display-6">Carga tu imagen</h4>
+    <div class="contenedor-img">
+      <img id="image" src="" style="display:none;">
+    </div>
+    <form id="upload-form" enctype="multipart/form-data">
+      <div class="file-select">
+        <input type="file" name="file" id="file-input">
+      </div>
+      <input type="button" class="eliminarButton" name="eliminar" style="display:none;" id="eliminar" value="Eliminar" onclick="eliminarImagen()">
+    </form>
+  </div>
+  <div class="contenedorProcesar"><button class="procesarBoton" onclick="procesarImg()">Procesar</button></div>
+</div>
+<div class="jumbotron" name="resultadoImg" id="resultadoImg" style="display: none;">
+  <div class="row">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Texto encontrado</h5>
+          <p class="card-text" id="texto-procesado"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Idioma dectectado</h5>
+          <p class="card-text" id="idiomas-texto-procesado"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br><br><br><br><br>
+
+
+{% endblock%}

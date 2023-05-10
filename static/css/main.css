@@ -1,0 +1,120 @@
+body {
+  background: #acb6e5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 0;
+  padding: 0;
+}
+
+.file-select {
+  position: relative;
+  display: inline-block;
+}
+
+.file-input{
+  cursor: pointer;
+}
+
+.file-select::before {
+  background-color: #5678EF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: 'Seleccionar'; 
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.file-select input[type="file"] {
+  opacity: 0;
+  width: 200px;
+  height: 32px;
+  display: inline-block;
+}
+
+
+.contenido{
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #ffffff42;
+  color: black;
+  border-radius: 25px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  text-align: center;
+  margin: 0px auto;
+  transition: all 0.5s;
+}
+
+.contenido:hover {
+  background-color: #cecfd0;
+  transition: all 0.5s;
+}
+
+.contenedor-img{
+  width: 400px;
+  margin: 10px auto;
+
+}
+
+img{
+  width: 100%;
+  border: solid rgba(0, 0, 0, 0.2);
+}
+
+.eliminarButton{
+  background-color: #e45252;
+  color: white;
+  border: solid 3px #e45252;
+  border-radius: 4px;
+  padding: 0px 60px;
+  display: inline-block;
+  box-shadow: 0px 2px 5px rgb(255 255 255 / 20%);
+  cursor: pointer;
+  margin: 6px auto;
+}
+
+.contenedorProcesar{
+  margin: 0px auto;
+  text-align: center;
+}
+
+.procesarBoton{
+  margin: 28px auto;
+  padding: 7px 57px;
+  border-radius: 10px;
+  color: white;
+  background-color: #14a94c;
+  border: none;
+  transition: all 0.5s;
+}
+
+.procesarBoton:hover{
+  background-color: #53df89;
+  transition: all 0.5s;
+}
+
+footer{
+  background-color: #343a40;
+  color: white;
+}
+
+.card{
+  transition: all 0.5s;
+}
+
+.card-hover{
+  height: 90%;
+  transition: all 0.5s;
+}
+
+.card-hover:hover{
+  background-color: #777777;
+  color: white;
+  transition: all 0.5s;
+}

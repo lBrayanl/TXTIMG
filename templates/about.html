@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="card" style="padding: 30px;">
+  <div class="container">
+    <div class="row">
+      {% for filename in image_filenames %}
+      <div class="col-md-4">
+        <div class="card mb-4 card-hover">
+          <img class="card-img-top" src="{{ url_for('static', filename='img/' + filename) }}" alt="{{ filename }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ filename }}</h5>
+          </div>
+        </div>
+      </div>
+      {% if loop.index % 3 == 0 %}
+      </div>
+      <div class="row">
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+{% endblock%}
